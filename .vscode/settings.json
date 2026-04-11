@@ -1,0 +1,16 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "clangd.path": "/home/yuri/.espressif/tools/esp-clang/esp-20.1.1_20250829/esp-clang/bin/clangd",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=/home/yuri/Dev/Embedded/labs/lab_1/build"
+  ],
+  "idf.openOcdConfigs": ["board/esp32s3-builtin.cfg"],
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32s3"
+  },
+  "idf.flashType": "JTAG",
+  "idf.port": "/dev/ttyACM0",
+  "idf.currentSetup": "/home/yuri/.espressif/v6/esp-idf"
+}

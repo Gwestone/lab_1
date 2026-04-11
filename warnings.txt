@@ -1,0 +1,975 @@
+Enabled checks:
+    bugprone-argument-comment
+    bugprone-assert-side-effect
+    bugprone-assignment-in-if-condition
+    bugprone-bad-signal-to-kill-thread
+    bugprone-bitwise-pointer-cast
+    bugprone-bool-pointer-implicit-conversion
+    bugprone-branch-clone
+    bugprone-casting-through-void
+    bugprone-chained-comparison
+    bugprone-compare-pointer-to-member-virtual-function
+    bugprone-copy-constructor-init
+    bugprone-crtp-constructor-accessibility
+    bugprone-dangling-handle
+    bugprone-dynamic-static-initializers
+    bugprone-easily-swappable-parameters
+    bugprone-empty-catch
+    bugprone-exception-escape
+    bugprone-fold-init-type
+    bugprone-forward-declaration-namespace
+    bugprone-forwarding-reference-overload
+    bugprone-implicit-widening-of-multiplication-result
+    bugprone-inaccurate-erase
+    bugprone-inc-dec-in-conditions
+    bugprone-incorrect-enable-if
+    bugprone-incorrect-enable-shared-from-this
+    bugprone-incorrect-roundings
+    bugprone-infinite-loop
+    bugprone-integer-division
+    bugprone-lambda-function-name
+    bugprone-macro-repeated-side-effects
+    bugprone-misplaced-operator-in-strlen-in-alloc
+    bugprone-misplaced-pointer-arithmetic-in-alloc
+    bugprone-misplaced-widening-cast
+    bugprone-move-forwarding-reference
+    bugprone-multi-level-implicit-pointer-conversion
+    bugprone-multiple-new-in-one-expression
+    bugprone-multiple-statement-macro
+    bugprone-narrowing-conversions
+    bugprone-no-escape
+    bugprone-non-zero-enum-to-bool-conversion
+    bugprone-nondeterministic-pointer-iteration-order
+    bugprone-not-null-terminated-result
+    bugprone-optional-value-conversion
+    bugprone-parent-virtual-call
+    bugprone-pointer-arithmetic-on-polymorphic-object
+    bugprone-posix-return
+    bugprone-redundant-branch-condition
+    bugprone-reserved-identifier
+    bugprone-return-const-ref-from-parameter
+    bugprone-shared-ptr-array-mismatch
+    bugprone-signal-handler
+    bugprone-signed-char-misuse
+    bugprone-sizeof-container
+    bugprone-sizeof-expression
+    bugprone-spuriously-wake-up-functions
+    bugprone-standalone-empty
+    bugprone-string-constructor
+    bugprone-string-integer-assignment
+    bugprone-string-literal-with-embedded-nul
+    bugprone-stringview-nullptr
+    bugprone-suspicious-enum-usage
+    bugprone-suspicious-include
+    bugprone-suspicious-memory-comparison
+    bugprone-suspicious-memset-usage
+    bugprone-suspicious-missing-comma
+    bugprone-suspicious-realloc-usage
+    bugprone-suspicious-semicolon
+    bugprone-suspicious-string-compare
+    bugprone-suspicious-stringview-data-usage
+    bugprone-swapped-arguments
+    bugprone-switch-missing-default-case
+    bugprone-tagged-union-member-count
+    bugprone-terminating-continue
+    bugprone-throw-keyword-missing
+    bugprone-too-small-loop-variable
+    bugprone-unchecked-optional-access
+    bugprone-undefined-memory-manipulation
+    bugprone-undelegated-constructor
+    bugprone-unhandled-exception-at-new
+    bugprone-unhandled-self-assignment
+    bugprone-unique-ptr-array-mismatch
+    bugprone-unsafe-functions
+    bugprone-unused-local-non-trivial-variable
+    bugprone-unused-raii
+    bugprone-unused-return-value
+    bugprone-use-after-move
+    bugprone-virtual-near-miss
+    clang-analyzer-core.BitwiseShift
+    clang-analyzer-core.CallAndMessage
+    clang-analyzer-core.CallAndMessageModeling
+    clang-analyzer-core.DereferenceModeling
+    clang-analyzer-core.DivideZero
+    clang-analyzer-core.DynamicTypePropagation
+    clang-analyzer-core.NonNullParamChecker
+    clang-analyzer-core.NonnilStringConstants
+    clang-analyzer-core.NullDereference
+    clang-analyzer-core.StackAddrEscapeBase
+    clang-analyzer-core.StackAddressEscape
+    clang-analyzer-core.UndefinedBinaryOperatorResult
+    clang-analyzer-core.VLASize
+    clang-analyzer-core.builtin.BuiltinFunctions
+    clang-analyzer-core.builtin.NoReturnFunctions
+    clang-analyzer-core.uninitialized.ArraySubscript
+    clang-analyzer-core.uninitialized.Assign
+    clang-analyzer-core.uninitialized.Branch
+    clang-analyzer-core.uninitialized.CapturedBlockVariable
+    clang-analyzer-core.uninitialized.NewArraySize
+    clang-analyzer-core.uninitialized.UndefReturn
+    clang-analyzer-unix.API
+    clang-analyzer-unix.BlockInCriticalSection
+    clang-analyzer-unix.Chroot
+    clang-analyzer-unix.DynamicMemoryModeling
+    clang-analyzer-unix.Errno
+    clang-analyzer-unix.Malloc
+    clang-analyzer-unix.MallocSizeof
+    clang-analyzer-unix.MismatchedDeallocator
+    clang-analyzer-unix.StdCLibraryFunctions
+    clang-analyzer-unix.Stream
+    clang-analyzer-unix.Vfork
+    clang-analyzer-unix.cstring.BadSizeArg
+    clang-analyzer-unix.cstring.CStringModeling
+    clang-analyzer-unix.cstring.NotNullTerminated
+    clang-analyzer-unix.cstring.NullArg
+    performance-avoid-endl
+    performance-enum-size
+    performance-faster-string-find
+    performance-for-range-copy
+    performance-implicit-conversion-in-loop
+    performance-inefficient-algorithm
+    performance-inefficient-string-concatenation
+    performance-inefficient-vector-operation
+    performance-move-const-arg
+    performance-move-constructor-init
+    performance-no-automatic-move
+    performance-no-int-to-ptr
+    performance-noexcept-destructor
+    performance-noexcept-move-constructor
+    performance-noexcept-swap
+    performance-trivially-destructible
+    performance-type-promotion-in-math-fn
+    performance-unnecessary-copy-initialization
+    performance-unnecessary-value-param
+    readability-avoid-nested-conditional-operator
+    readability-avoid-return-with-void-value
+    readability-avoid-unconditional-preprocessor-if
+    readability-braces-around-statements
+    readability-const-return-type
+    readability-container-contains
+    readability-container-data-pointer
+    readability-container-size-empty
+    readability-convert-member-functions-to-static
+    readability-delete-null-pointer
+    readability-duplicate-include
+    readability-else-after-return
+    readability-enum-initial-value
+    readability-function-cognitive-complexity
+    readability-function-size
+    readability-identifier-length
+    readability-identifier-naming
+    readability-implicit-bool-conversion
+    readability-inconsistent-declaration-parameter-name
+    readability-isolate-declaration
+    readability-make-member-function-const
+    readability-math-missing-parentheses
+    readability-misleading-indentation
+    readability-misplaced-array-index
+    readability-named-parameter
+    readability-non-const-parameter
+    readability-operators-representation
+    readability-qualified-auto
+    readability-redundant-access-specifiers
+    readability-redundant-casting
+    readability-redundant-control-flow
+    readability-redundant-declaration
+    readability-redundant-function-ptr-dereference
+    readability-redundant-inline-specifier
+    readability-redundant-member-init
+    readability-redundant-preprocessor
+    readability-redundant-smartptr-get
+    readability-redundant-string-cstr
+    readability-redundant-string-init
+    readability-reference-to-constructed-temporary
+    readability-simplify-boolean-expr
+    readability-simplify-subscript-expr
+    readability-static-accessed-through-instance
+    readability-static-definition-in-anonymous-namespace
+    readability-string-compare
+    readability-suspicious-call-argument
+    readability-uniqueptr-delete-release
+    readability-uppercase-literal-suffix
+    readability-use-anyofallof
+    readability-use-std-min-max
+
+Running clang-tidy for 1 files out of 1 in compilation database ...
+[1/1][0.1s] /home/yuri/.espressif/tools/esp-clang/esp-20.1.1_20250829/esp-clang/bin/clang-tidy -header-filter=.*\..* -checks=-*,clang-analyzer-core.NullDereference,clang-analyzer-unix.*,bugprone-*,-bugprone-macro-parentheses,readability-*,performance-*,-readability-magic-numbers,-readability-avoid-const-params-in-decls -p=/home/yuri/Dev/Embedded/labs/lab_1/build /home/yuri/Dev/Embedded/labs/lab_1/main/main.c
+error: unknown argument: '-fno-malloc-dce' [clang-diagnostic-error]
+error: unknown argument: '-fno-shrink-wrap' [clang-diagnostic-error]
+error: unknown argument: '-fzero-init-padding-bits=all' [clang-diagnostic-error]
+error: unknown warning option '-Wno-old-style-declaration'; did you mean '-Wno-out-of-line-declaration'? [clang-diagnostic-unknown-warning-option]
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_assert.h:7:9: warning: declaration uses identifier '__ESP_ASSERT_H__', which is a reserved identifier [bugprone-reserved-identifier]
+    7 | #define __ESP_ASSERT_H__
+      |         ^~~~~~~~~~~~~~~~
+      |         ESP_ASSERT_H_
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_attr.h:8:9: warning: declaration uses identifier '__ESP_ATTR_H__', which is a reserved identifier [bugprone-reserved-identifier]
+    8 | #define __ESP_ATTR_H__
+      |         ^~~~~~~~~~~~~~
+      |         ESP_ATTR_H_
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_attr.h:153:9: warning: declaration uses identifier '__NOINIT_ATTR', which is a reserved identifier [bugprone-reserved-identifier]
+  153 | #define __NOINIT_ATTR _SECTION_ATTR_IMPL(".noinit", __COUNTER__)
+      |         ^~~~~~~~~~~~~
+      |         NOINIT_ATTR
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_attr.h:213:9: warning: declaration uses identifier '_COUNTER_STRINGIFY', which is a reserved identifier [bugprone-reserved-identifier]
+  213 | #define _COUNTER_STRINGIFY(COUNTER) #COUNTER
+      |         ^~~~~~~~~~~~~~~~~~
+      |         COUNTER_STRINGIFY
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_attr.h:216:9: warning: declaration uses identifier '_SECTION_ATTR_IMPL', which is a reserved identifier [bugprone-reserved-identifier]
+  216 | #define _SECTION_ATTR_IMPL(SECTION, COUNTER) __attribute__((section(SECTION "." _COUNTER_STRINGIFY(COUNTER))))
+      |         ^~~~~~~~~~~~~~~~~~
+      |         SECTION_ATTR_IMPL
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_attr.h:217:9: warning: declaration uses identifier '_SECTION_FORCE_ATTR_IMPL', which is a reserved identifier [bugprone-reserved-identifier]
+  217 | #define _SECTION_FORCE_ATTR_IMPL(SECTION, COUNTER) __attribute__((noinline, section(SECTION "." _COUNTER_STRINGIFY(COUNTER))))
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+      |         SECTION_FORCE_ATTR_IMPL
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_attr.h:290:9: warning: declaration uses identifier '_SECTION_ATTR_IMPL_GENERIC', which is a reserved identifier [bugprone-reserved-identifier]
+  290 | #define _SECTION_ATTR_IMPL_GENERIC(SECTION, COUNTER) \
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         SECTION_ATTR_IMPL_GENERIC
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_attr.h:295:9: warning: declaration uses identifier '_SECTION_ATTR_SYMBOL_DECL_GENERIC', which is a reserved identifier [bugprone-reserved-identifier]
+  295 | #define _SECTION_ATTR_SYMBOL_DECL_GENERIC(TYPE, SECTION_NAME) \
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         SECTION_ATTR_SYMBOL_DECL_GENERIC
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_attr.h:299:9: warning: declaration uses identifier '_SECTION_START', which is a reserved identifier [bugprone-reserved-identifier]
+  299 | #define _SECTION_START(SECTION_NAME)  (&_##SECTION_NAME##_start)
+      |         ^~~~~~~~~~~~~~
+      |         SECTION_START
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_attr.h:300:9: warning: declaration uses identifier '_SECTION_END', which is a reserved identifier [bugprone-reserved-identifier]
+  300 | #define _SECTION_END(SECTION_NAME)    (&_##SECTION_NAME##_end)
+      |         ^~~~~~~~~~~~
+      |         SECTION_END
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_compiler.h:56:9: warning: declaration uses identifier '__COMPILER_PRAGMA__', which is a reserved identifier [bugprone-reserved-identifier]
+   56 | #define __COMPILER_PRAGMA__(string) _Pragma(#string)
+      |         ^~~~~~~~~~~~~~~~~~~
+      |         COMPILER_PRAGMA_
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_compiler.h:57:9: warning: declaration uses identifier '_COMPILER_PRAGMA_', which is a reserved identifier [bugprone-reserved-identifier]
+   57 | #define _COMPILER_PRAGMA_(string) __COMPILER_PRAGMA__(string)
+      |         ^~~~~~~~~~~~~~~~~
+      |         COMPILER_PRAGMA_
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_err.h:79:6: warning: declaration uses identifier '_esp_error_check_failed', which is reserved in the global namespace [bugprone-reserved-identifier]
+   79 | void _esp_error_check_failed(esp_err_t rc, const char *file, int line, const char *function, const char *expression) __attribute__((__noreturn__));
+      |      ^~~~~~~~~~~~~~~~~~~~~~~
+      |      esp_error_check_failed
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_err.h:79:40: warning: parameter name 'rc' is too short, expected at least 3 characters [readability-identifier-length]
+   79 | void _esp_error_check_failed(esp_err_t rc, const char *file, int line, const char *function, const char *expression) __attribute__((__noreturn__));
+      |                                        ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_err.h:81:6: warning: declaration uses identifier '_esp_error_check_failed_without_abort', which is reserved in the global namespace [bugprone-reserved-identifier]
+   81 | void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int line, const char *function, const char *expression);
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |      esp_error_check_failed_without_abort
+/home/yuri/.espressif/v6/esp-idf/components/esp_common/include/esp_err.h:81:54: warning: parameter name 'rc' is too short, expected at least 3 characters [readability-identifier-length]
+   81 | void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int line, const char *function, const char *expression);
+      |                                                      ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_driver_gpio/include/driver/gpio.h:238:36: warning: parameter name 'fn' is too short, expected at least 3 characters [readability-identifier-length]
+  238 | esp_err_t gpio_isr_register(void (*fn)(void *), void *arg, int intr_alloc_flags, gpio_isr_handle_t *handle);
+      |                                    ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hal_gpio/esp32s3/include/soc/gpio_num.h:16:9: warning: initial values in enum '<unnamed>' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+   16 | typedef enum {
+      |         ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hal_gpio/include/hal/gpio_types.h:91:9: warning: initial values in enum '<unnamed>' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+   91 | typedef enum {
+      |         ^
+   92 |     GPIO_INTR_DISABLE = 0,     /*!< Disable GPIO interrupt                             */
+   93 |     GPIO_INTR_POSEDGE = 1,     /*!< GPIO interrupt type : rising edge                  */
+   94 |     GPIO_INTR_NEGEDGE = 2,     /*!< GPIO interrupt type : falling edge                 */
+   95 |     GPIO_INTR_ANYEDGE = 3,     /*!< GPIO interrupt type : both rising and falling edge */
+   96 |     GPIO_INTR_LOW_LEVEL = 4,   /*!< GPIO interrupt type : input low level trigger      */
+   97 |     GPIO_INTR_HIGH_LEVEL = 5,  /*!< GPIO interrupt type : input high level trigger     */
+   98 |     GPIO_INTR_MAX,
+      |                  
+      |                   = 6
+/home/yuri/.espressif/v6/esp-idf/components/esp_hal_gpio/include/hal/gpio_types.h:134:9: warning: initial values in enum '<unnamed>' are not consistent, consider explicit initialization of all, none or only the first enumerator [readability-enum-initial-value]
+  134 | typedef enum {
+      |         ^
+  135 |     GPIO_DRIVE_CAP_0       = 0,    /*!< Pad drive capability: weak          */
+  136 |     GPIO_DRIVE_CAP_1       = 1,    /*!< Pad drive capability: stronger      */
+  137 |     GPIO_DRIVE_CAP_2       = 2,    /*!< Pad drive capability: medium */
+  138 |     GPIO_DRIVE_CAP_DEFAULT = 2,    /*!< Pad drive capability: medium */
+  139 |     GPIO_DRIVE_CAP_3       = 3,    /*!< Pad drive capability: strongest     */
+  140 |     GPIO_DRIVE_CAP_MAX,
+      |                       
+      |                        = 4
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_cpu.h:223:75: warning: parameter name 'pc' is too short, expected at least 3 characters [readability-identifier-length]
+  223 | FORCE_INLINE_ATTR __attribute__((pure)) void *esp_cpu_pc_to_addr(uint32_t pc)
+      |                                                                           ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_cpu.h:227:12: warning: integer to pointer cast pessimizes optimization opportunities [performance-no-int-to-ptr]
+  227 |     return (void *)((pc & 0x3fffffffU) | 0x40000000U);
+      |            ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:30:12: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+   30 |     return ((SOC_DRAM_LOW == SOC_IRAM_LOW) && (SOC_DRAM_HIGH == SOC_IRAM_HIGH));
+      |            ^                                                                   
+      |                                                                                 != 0
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:41:12: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+   41 |     return ((SOC_RTC_IRAM_LOW == SOC_RTC_DRAM_LOW) && (SOC_RTC_IRAM_HIGH == SOC_RTC_DRAM_HIGH));
+      |            ^                                                                                   
+      |                                                                                                 != 0
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:55:48: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+   55 | inline static bool esp_ptr_in_iram(const void *p) {
+      |                                                ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:59:12: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+   59 |     return ((intptr_t)p >= SOC_IRAM_LOW && (intptr_t)p < SOC_IRAM_HIGH);
+      |            ^                                                           
+      |                                                                         != 0
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:71:48: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+   71 | inline static bool esp_ptr_in_dram(const void *p) {
+      |                                                ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:72:12: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+   72 |     return ((intptr_t)p >= SOC_DRAM_LOW && (intptr_t)p < SOC_DRAM_HIGH);
+      |            ^                                                           
+      |                                                                         != 0
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:83:54: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+   83 | inline static bool esp_ptr_in_diram_dram(const void *p) {
+      |                                                      ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:84:12: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+   84 |     return ((intptr_t)p >= SOC_DIRAM_DRAM_LOW && (intptr_t)p < SOC_DIRAM_DRAM_HIGH);
+      |            ^                                                                       
+      |                                                                                     != 0
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:95:54: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+   95 | inline static bool esp_ptr_in_diram_iram(const void *p) {
+      |                                                      ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:101:12: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+  101 |     return ((intptr_t)p >= SOC_DIRAM_IRAM_LOW && (intptr_t)p < SOC_DIRAM_IRAM_HIGH);
+      |            ^                                                                       
+      |                                                                                     != 0
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:113:57: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  113 | inline static bool esp_ptr_in_rtc_iram_fast(const void *p) {
+      |                                                         ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:115:12: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+  115 |     return ((intptr_t)p >= SOC_RTC_IRAM_LOW && (intptr_t)p < SOC_RTC_IRAM_HIGH);
+      |            ^                                                                   
+      |                                                                                 != 0
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:130:57: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  130 | inline static bool esp_ptr_in_rtc_dram_fast(const void *p) {
+      |                                                         ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:132:12: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+  132 |     return ((intptr_t)p >= SOC_RTC_DRAM_LOW && (intptr_t)p < SOC_RTC_DRAM_HIGH);
+      |            ^                                                                   
+      |                                                                                 != 0
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:147:52: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  147 | inline static bool esp_ptr_in_rtc_slow(const void *p) {
+      |                                                    ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:149:12: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+  149 |     return ((intptr_t)p >= SOC_RTC_DATA_LOW && (intptr_t)p < SOC_RTC_DATA_HIGH);
+      |            ^                                                                   
+      |                                                                                 != 0
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:162:61: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  162 | inline static void * esp_ptr_diram_dram_to_iram(const void *p) {
+      |                                                             ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:166:12: warning: integer to pointer cast pessimizes optimization opportunities [performance-no-int-to-ptr]
+  166 |     return (void *) ( SOC_DIRAM_IRAM_LOW + ((intptr_t)p - SOC_DIRAM_DRAM_LOW) );
+      |            ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:176:59: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  176 | inline static void * esp_ptr_rtc_dram_to_iram(const void *p) {
+      |                                                           ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:181:12: warning: integer to pointer cast pessimizes optimization opportunities [performance-no-int-to-ptr]
+  181 |     return (void *) ptr;
+      |            ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:191:61: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  191 | inline static void * esp_ptr_diram_iram_to_dram(const void *p) {
+      |                                                             ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:195:12: warning: integer to pointer cast pessimizes optimization opportunities [performance-no-int-to-ptr]
+  195 |     return (void *) ( SOC_DIRAM_DRAM_LOW + ((intptr_t)p - SOC_DIRAM_IRAM_LOW) );
+      |            ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:236:52: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  236 | inline static bool esp_ptr_dma_capable(const void *p)
+      |                                                    ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:238:12: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+  238 |     return (intptr_t)p >= SOC_DMA_LOW && (intptr_t)p < SOC_DMA_HIGH;
+      |            ^                                                       
+      |            (                                                       ) != 0
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:248:42: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  248 | bool esp_ptr_dma_ext_capable(const void *p);
+      |                                          ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:258:53: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  258 | inline static bool esp_ptr_word_aligned(const void *p)
+      |                                                     ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:270:37: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  270 | bool esp_ptr_executable(const void *p);
+      |                                     ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:279:42: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  279 | bool esp_ptr_byte_accessible(const void *p);
+      |                                          ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:289:49: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  289 | inline static bool esp_ptr_internal(const void *p) {
+      |                                                 ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:290:10: warning: variable name 'r' is too short, expected at least 3 characters [readability-identifier-length]
+  290 |     bool r;
+      |          ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:291:9: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+  291 |     r = ((intptr_t)p >= SOC_MEM_INTERNAL_LOW && (intptr_t)p < SOC_MEM_INTERNAL_HIGH);
+      |         ^                                                                           
+      |         (                                                                            != 0)
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:328:39: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  328 | bool esp_ptr_external_ram(const void *p);
+      |                                       ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:338:48: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  338 | inline static bool esp_ptr_in_drom(const void *p) {
+      |                                                ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:349:12: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+  349 |     return ((intptr_t)p >= drom_start_addr && (intptr_t)p < SOC_DROM_HIGH);
+      |            ^                                                              
+      |                                                                            != 0
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:361:47: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  361 | inline static bool esp_ptr_in_rom(const void *p)
+      |                                               ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:363:14: warning: variable name 'ip' is too short, expected at least 3 characters [readability-identifier-length]
+  363 |     intptr_t ip = (intptr_t) p;
+      |              ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:372:9: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+  372 |         (ip >= SOC_IROM_MASK_LOW && ip < SOC_IROM_MASK_HIGH);
+      |         ^                                                   
+      |                                                              != 0
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:383:51: warning: parameter name 'sp' is too short, expected at least 3 characters [readability-identifier-length]
+  383 | inline static bool esp_stack_ptr_in_dram(uint32_t sp)
+      |                                                   ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:386:12: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+  386 |     return !(sp < SOC_DRAM_LOW + 0x10 || sp > SOC_DRAM_HIGH - 0x10 || ((sp & 0xF) != 0));
+      |            ^                                                                            
+      |            (                                                                            ) != 0
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:417:51: warning: parameter name 'sp' is too short, expected at least 3 characters [readability-identifier-length]
+  417 | inline static bool esp_stack_ptr_is_sane(uint32_t sp)
+      |                                                   ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:419:12: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+  419 |     return esp_stack_ptr_in_dram(sp)
+      |            ^
+      |            (int)
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:419:12: warning: implicit conversion 'int' -> 'bool' [readability-implicit-bool-conversion]
+  419 |     return esp_stack_ptr_in_dram(sp)
+      |            ^
+      |            (
+  420 | #if CONFIG_FREERTOS_TASK_CREATE_ALLOW_EXT_MEM
+  421 |         || esp_stack_ptr_in_extram(sp)
+  422 | #endif
+  423 | #if CONFIG_ESP_SYSTEM_ALLOW_RTC_FAST_MEM_AS_HEAP
+  424 |         || esp_ptr_in_rtc_dram_fast((void*) sp)
+      |                                                
+      |                                                ) != 0
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:424:12: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+  424 |         || esp_ptr_in_rtc_dram_fast((void*) sp)
+      |            ^
+      |            (int)
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/esp_memory_utils.h:424:37: warning: integer to pointer cast pessimizes optimization opportunities [performance-no-int-to-ptr]
+  424 |         || esp_ptr_in_rtc_dram_fast((void*) sp)
+      |                                     ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_hw_support/include/spinlock.h:124:9: warning: implicit conversion 'bool' -> 'int' [readability-implicit-bool-conversion]
+  124 |     if (lock_set || timeout == SPINLOCK_NO_WAIT) {
+      |         ^
+      |         (int)
+/home/yuri/.espressif/v6/esp-idf/components/esp_libc/platform_include/stdio.h:11:10: error: 'sys/features.h' file not found [clang-diagnostic-error]
+   11 | #include <sys/features.h>
+      |          ^~~~~~~~~~~~~~~~
+/home/yuri/.espressif/v6/esp-idf/components/esp_libc/platform_include/sys/reent.h:31:8: warning: declaration uses identifier '_reent', which is reserved in the global namespace [bugprone-reserved-identifier]
+   31 | struct _reent {};
+      |        ^~~~~~
+      |        reent
+   32 | #define __getreent() NULL
+   33 | 
+   34 | int _system_r(struct _reent *r, const char *str);
+      |                      ~~~~~~
+      |                      reent
+   35 | int _raise_r(struct _reent *r, int sig);
+      |                     ~~~~~~
+      |                     reent
+/home/yuri/.espressif/v6/esp-idf/components/esp_libc/platform_include/sys/reent.h:32:9: warning: declaration uses identifier '__getreent', which is a reserved identifier [bugprone-reserved-identifier]
+   32 | #define __getreent() NULL
+      |         ^~~~~~~~~~
+      |         _getreent
+/home/yuri/.espressif/v6/esp-idf/components/esp_libc/platform_include/sys/reent.h:34:5: warning: declaration uses identifier '_system_r', which is reserved in the global namespace [bugprone-reserved-identifier]
+   34 | int _system_r(struct _reent *r, const char *str);
+      |     ^~~~~~~~~
+      |     system_r
+/home/yuri/.espressif/v6/esp-idf/components/esp_libc/platform_include/sys/reent.h:34:30: warning: parameter name 'r' is too short, expected at least 3 characters [readability-identifier-length]
+   34 | int _system_r(struct _reent *r, const char *str);
+      |                              ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_libc/platform_include/sys/reent.h:35:5: warning: declaration uses identifier '_raise_r', which is reserved in the global namespace [bugprone-reserved-identifier]
+   35 | int _raise_r(struct _reent *r, int sig);
+      |     ^~~~~~~~
+      |     raise_r
+/home/yuri/.espressif/v6/esp-idf/components/esp_libc/platform_include/sys/reent.h:35:29: warning: parameter name 'r' is too short, expected at least 3 characters [readability-identifier-length]
+   35 | int _raise_r(struct _reent *r, int sig);
+      |                             ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_rom/include/esp_rom_sys.h:56:46: warning: parameter name 'ap' is too short, expected at least 3 characters [readability-identifier-length]
+   56 | int esp_rom_vprintf(const char *fmt, va_list ap);
+      |                                              ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_rom/include/esp_rom_sys.h:91:32: warning: parameter name 'us' is too short, expected at least 3 characters [readability-identifier-length]
+   91 | void esp_rom_delay_us(uint32_t us);
+      |                                ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_rom/include/esp_rom_sys.h:100:66: warning: parameter name 'c' is too short, expected at least 3 characters [readability-identifier-length]
+  100 | void esp_rom_install_channel_putc(int channel, void (*putc)(char c));
+      |                                                                  ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_rom/include/esp_rom_sys.h:108:38: warning: parameter name 'c' is too short, expected at least 3 characters [readability-identifier-length]
+  108 | void esp_rom_output_to_channels(char c);
+      |                                      ^
+/home/yuri/.espressif/v6/esp-idf/components/esp_system/include/esp_private/crosscore_int.h:7:9: warning: declaration uses identifier '__ESP_CROSSCORE_INT_H', which is a reserved identifier [bugprone-reserved-identifier]
+    7 | #define __ESP_CROSSCORE_INT_H
+      |         ^~~~~~~~~~~~~~~~~~~~~
+      |         ESP_CROSSCORE_INT_H
+/home/yuri/.espressif/v6/esp-idf/components/esp_system/include/esp_system.h:8:9: warning: declaration uses identifier '__ESP_SYSTEM_H__', which is a reserved identifier [bugprone-reserved-identifier]
+    8 | #define __ESP_SYSTEM_H__
+      |         ^~~~~~~~~~~~~~~~
+      |         ESP_SYSTEM_H_
+/home/yuri/.espressif/v6/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:182:24: warning: parameter name 'pv' is too short, expected at least 3 characters [readability-identifier-length]
+  182 | void vPortFree( void * pv ) PRIVILEGED_FUNCTION;
+      |                        ^
+/home/yuri/.espressif/v6/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:381:27: warning: function 'xTaskCreatePinnedToCore' has 1 other declaration with different parameter names [readability-inconsistent-declaration-parameter-name]
+  381 |         extern BaseType_t xTaskCreatePinnedToCore( TaskFunction_t pxTaskCode,
+      |                           ^
+/home/yuri/.espressif/v6/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:63:16: note: the 1st inconsistent declaration seen here
+   63 |     BaseType_t xTaskCreatePinnedToCore( TaskFunction_t pxTaskCode,
+      |                ^
+/home/yuri/.espressif/v6/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:63:16: note: differing parameters are named here: ('ulStackDepth', 'pxCreatedTask'), in the other declaration: ('usStackDepth', 'pvCreatedTask')
+/home/yuri/.espressif/v6/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:517:29: warning: function 'xTaskCreateStaticPinnedToCore' has 1 other declaration with different parameter names [readability-inconsistent-declaration-parameter-name]
+  517 |         extern TaskHandle_t xTaskCreateStaticPinnedToCore( TaskFunction_t pxTaskCode,
+      |                             ^
+/home/yuri/.espressif/v6/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:101:18: note: the 1st inconsistent declaration seen here
+  101 |     TaskHandle_t xTaskCreateStaticPinnedToCore( TaskFunction_t pxTaskCode,
+      |                  ^
+/home/yuri/.espressif/v6/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:101:18: note: differing parameters are named here: ('puxStackBuffer'), in the other declaration: ('pxStackBuffer')
+/home/yuri/.espressif/v6/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:459:13: warning: declaration uses identifier '_frxt_setup_switch', which is reserved in the global namespace [bugprone-reserved-identifier]
+  459 | extern void _frxt_setup_switch( void );     //Defined in portasm.S
+      |             ^~~~~~~~~~~~~~~~~~
+      |             frxt_setup_switch
+/home/yuri/.espressif/v6/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:565:5: warning: if with identical then and else branches [bugprone-branch-clone]
+  565 |     if (xPortInIsrContext()) {
+      |     ^
+/home/yuri/.espressif/v6/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:567:7: note: else branch starts here
+  567 |     } else {
+      |       ^
+/home/yuri/.espressif/v6/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:580:5: warning: if with identical then and else branches [bugprone-branch-clone]
+  580 |     if (xPortInIsrContext()) {
+      |     ^
+/home/yuri/.espressif/v6/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:582:7: note: else branch starts here
+  582 |     } else {
+      |       ^
+/home/yuri/.espressif/v6/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:63:16: warning: redundant 'xTaskCreatePinnedToCore' declaration [readability-redundant-declaration]
+   63 |     BaseType_t xTaskCreatePinnedToCore( TaskFunction_t pxTaskCode,
+      |                ^
+/home/yuri/.espressif/v6/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:381:27: note: previously declared here
+  381 |         extern BaseType_t xTaskCreatePinnedToCore( TaskFunction_t pxTaskCode,
+      |                           ^
+/home/yuri/.espressif/v6/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:101:18: warning: redundant 'xTaskCreateStaticPinnedToCore' declaration [readability-redundant-declaration]
+  101 |     TaskHandle_t xTaskCreateStaticPinnedToCore( TaskFunction_t pxTaskCode,
+      |                  ^
+/home/yuri/.espressif/v6/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:517:29: note: previously declared here
+  517 |         extern TaskHandle_t xTaskCreateStaticPinnedToCore( TaskFunction_t pxTaskCode,
+      |                             ^
+/home/yuri/.espressif/v6/esp-idf/components/heap/include/multi_heap.h:52:90: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+   52 | void __attribute__((deprecated)) multi_heap_aligned_free(multi_heap_handle_t heap, void *p);
+      |                                                                                          ^
+/home/yuri/.espressif/v6/esp-idf/components/heap/include/multi_heap.h:61:54: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+   61 | void multi_heap_free(multi_heap_handle_t heap, void *p);
+      |                                                      ^
+/home/yuri/.espressif/v6/esp-idf/components/heap/include/multi_heap.h:73:58: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+   73 | void *multi_heap_realloc(multi_heap_handle_t heap, void *p, size_t size);
+      |                                                          ^
+/home/yuri/.espressif/v6/esp-idf/components/heap/include/multi_heap.h:84:70: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+   84 | size_t multi_heap_get_allocated_size(multi_heap_handle_t heap, void *p);
+      |                                                                      ^
+/home/yuri/.espressif/v6/esp-idf/components/heap/include/multi_heap.h:240:71: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+  240 | size_t multi_heap_get_full_block_size(multi_heap_handle_t heap, void *p);
+      |                                                                       ^
+/home/yuri/.espressif/v6/esp-idf/components/soc/esp32s3/include/soc/soc_caps.h:28:9: warning: declaration uses identifier '_SOC_CAPS_TARGET_IS_ESP32S3', which is a reserved identifier [bugprone-reserved-identifier]
+   28 | #define _SOC_CAPS_TARGET_IS_ESP32S3     1 // [gen_soc_caps:ignore]
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         SOC_CAPS_TARGET_IS_ESP32S3
+/home/yuri/.espressif/v6/esp-idf/components/soc/include/soc/soc_caps_eval.h:21:9: warning: declaration uses identifier '_SOC_CAPS_EVAL', which is a reserved identifier [bugprone-reserved-identifier]
+   21 | #define _SOC_CAPS_EVAL(_name)               _SOC_CAPS_ ## _name
+      |         ^~~~~~~~~~~~~~
+      |         SOC_CAPS_EVAL
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core-isa.h:32:9: warning: declaration uses identifier '_XTENSA_CORE_CONFIGURATION_H', which is a reserved identifier [bugprone-reserved-identifier]
+   32 | #define _XTENSA_CORE_CONFIGURATION_H
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         XTENSA_CORE_CONFIGURATION_H
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:165:9: warning: declaration uses identifier '_XCHAL_INTLEVEL_MASK', which is a reserved identifier [bugprone-reserved-identifier]
+  165 | #define _XCHAL_INTLEVEL_MASK(n)     XCHAL_INTLEVEL ## n ## _MASK
+      |         ^~~~~~~~~~~~~~~~~~~~
+      |         XCHAL_INTLEVEL_MASK
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:167:9: warning: declaration uses identifier '_XCHAL_INTLEVEL_ANDBELOWMASK', which is a reserved identifier [bugprone-reserved-identifier]
+  167 | #define _XCHAL_INTLEVEL_ANDBELOWMASK(n) XCHAL_INTLEVEL ## n ## _ANDBELOW_MASK
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         XCHAL_INTLEVEL_ANDBELOWMASK
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:169:9: warning: declaration uses identifier '_XCHAL_INTLEVEL_NUM', which is a reserved identifier [bugprone-reserved-identifier]
+  169 | #define _XCHAL_INTLEVEL_NUM(n)      XCHAL_INTLEVEL ## n ## _NUM
+      |         ^~~~~~~~~~~~~~~~~~~
+      |         XCHAL_INTLEVEL_NUM
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:171:9: warning: declaration uses identifier '_XCHAL_INT_LEVEL', which is a reserved identifier [bugprone-reserved-identifier]
+  171 | #define _XCHAL_INT_LEVEL(n)     XCHAL_INT ## n ## _LEVEL
+      |         ^~~~~~~~~~~~~~~~
+      |         XCHAL_INT_LEVEL
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:173:9: warning: declaration uses identifier '_XCHAL_INT_TYPE', which is a reserved identifier [bugprone-reserved-identifier]
+  173 | #define _XCHAL_INT_TYPE(n)      XCHAL_INT ## n ## _TYPE
+      |         ^~~~~~~~~~~~~~~
+      |         XCHAL_INT_TYPE
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:175:9: warning: declaration uses identifier '_XCHAL_TIMER_INTERRUPT', which is a reserved identifier [bugprone-reserved-identifier]
+  175 | #define _XCHAL_TIMER_INTERRUPT(n)   XCHAL_TIMER ## n ## _INTERRUPT
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+      |         XCHAL_TIMER_INTERRUPT
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:248:2: warning: preprocessor condition is always 'false', consider removing both the condition and its contents [readability-avoid-unconditional-preprocessor-if]
+  248 | #if 0 /*XCHAL_HAVE_NMI*/
+      |  ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:573:2: warning: preprocessor condition is always 'false', consider removing both the condition and its contents [readability-avoid-unconditional-preprocessor-if]
+  573 | #if 0
+      |  ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:582:9: warning: declaration uses identifier '_XCHAL_INTLEVEL_VECTOR_VADDR', which is a reserved identifier [bugprone-reserved-identifier]
+  582 | #define _XCHAL_INTLEVEL_VECTOR_VADDR(n)     XCHAL_INTLEVEL ## n ## _VECTOR_VADDR
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         XCHAL_INTLEVEL_VECTOR_VADDR
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:859:9: warning: declaration uses identifier '_MEMCTL_SNOOP_EN', which is a reserved identifier [bugprone-reserved-identifier]
+  859 | #define _MEMCTL_SNOOP_EN        0x00        /* Don't enable snoop */
+      |         ^~~~~~~~~~~~~~~~
+      |         MEMCTL_SNOOP_EN
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:865:9: warning: declaration uses identifier '_MEMCTL_L0IBUF_EN', which is a reserved identifier [bugprone-reserved-identifier]
+  865 | #define _MEMCTL_L0IBUF_EN       0x01        /* Enable loop buffer */
+      |         ^~~~~~~~~~~~~~~~~
+      |         MEMCTL_L0IBUF_EN
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:890:9: warning: declaration uses identifier '_XCHAL_ITLB_SET', which is a reserved identifier [bugprone-reserved-identifier]
+  890 | #define _XCHAL_ITLB_SET(n,_what)    XCHAL_ITLB_SET ## n ## _what
+      |         ^~~~~~~~~~~~~~~
+      |         XCHAL_ITLB_SET
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:892:9: warning: declaration uses identifier '_XCHAL_ITLB_SET_E', which is a reserved identifier [bugprone-reserved-identifier]
+  892 | #define _XCHAL_ITLB_SET_E(n,i,_what)    XCHAL_ITLB_SET ## n ## _E ## i ## _what
+      |         ^~~~~~~~~~~~~~~~~
+      |         XCHAL_ITLB_SET_E
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:894:9: warning: declaration uses identifier '_XCHAL_DTLB_SET', which is a reserved identifier [bugprone-reserved-identifier]
+  894 | #define _XCHAL_DTLB_SET(n,_what)    XCHAL_DTLB_SET ## n ## _what
+      |         ^~~~~~~~~~~~~~~
+      |         XCHAL_DTLB_SET
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:896:9: warning: declaration uses identifier '_XCHAL_DTLB_SET_E', which is a reserved identifier [bugprone-reserved-identifier]
+  896 | #define _XCHAL_DTLB_SET_E(n,i,_what)    XCHAL_DTLB_SET ## n ## _E ## i ## _what
+      |         ^~~~~~~~~~~~~~~~~
+      |         XCHAL_DTLB_SET_E
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:911:2: warning: preprocessor condition is always 'false', consider removing both the condition and its contents [readability-avoid-unconditional-preprocessor-if]
+  911 | #if 0
+      |  ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:1326:9: warning: declaration uses identifier '_XCHAL_CP_SA_SIZE', which is a reserved identifier [bugprone-reserved-identifier]
+ 1326 | #define _XCHAL_CP_SA_SIZE(n)        XCHAL_CP ## n ## _SA_SIZE
+      |         ^~~~~~~~~~~~~~~~~
+      |         XCHAL_CP_SA_SIZE
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/core.h:1328:9: warning: declaration uses identifier '_XCHAL_CP_SA_ALIGN', which is a reserved identifier [bugprone-reserved-identifier]
+ 1328 | #define _XCHAL_CP_SA_ALIGN(n)       XCHAL_CP ## n ## _SA_ALIGN
+      |         ^~~~~~~~~~~~~~~~~~
+      |         XCHAL_CP_SA_ALIGN
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/esp32s3/include/xtensa/config/tie.h:33:9: warning: declaration uses identifier '_XTENSA_CORE_TIE_H', which is a reserved identifier [bugprone-reserved-identifier]
+   33 | #define _XTENSA_CORE_TIE_H
+      |         ^~~~~~~~~~~~~~~~~~
+      |         XTENSA_CORE_TIE_H
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:36:14: warning: variable name 'id' is too short, expected at least 3 characters [readability-identifier-length]
+   36 |     uint32_t id;
+      |              ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:51:14: warning: variable name 'id' is too short, expected at least 3 characters [readability-identifier-length]
+   51 |     uint32_t id;
+      |              ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:63:11: warning: variable name 'sp' is too short, expected at least 3 characters [readability-identifier-length]
+   63 |     void *sp;
+      |           ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:129:48: warning: 2 adjacent parameters of 'xt_utils_set_breakpoint' of convertible types are easily swapped by mistake [bugprone-easily-swappable-parameters]
+  129 | FORCE_INLINE_ATTR void xt_utils_set_breakpoint(int bp_num, uint32_t bp_addr)
+      |                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:129:52: note: the first parameter in the range is 'bp_num'
+  129 | FORCE_INLINE_ATTR void xt_utils_set_breakpoint(int bp_num, uint32_t bp_addr)
+      |                                                    ^~~~~~
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:129:69: note: the last parameter in the range is 'bp_addr'
+  129 | FORCE_INLINE_ATTR void xt_utils_set_breakpoint(int bp_num, uint32_t bp_addr)
+      |                                                                     ^~~~~~~
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:129:48: note: 
+  129 | FORCE_INLINE_ATTR void xt_utils_set_breakpoint(int bp_num, uint32_t bp_addr)
+      |                                                ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:129:60: note: 'int' and 'uint32_t' may be implicitly converted: 'int' -> 'uint32_t' (as 'unsigned int'), 'uint32_t' (as 'unsigned int') -> 'int'
+  129 | FORCE_INLINE_ATTR void xt_utils_set_breakpoint(int bp_num, uint32_t bp_addr)
+      |                                                            ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:160:48: warning: 3 adjacent parameters of 'xt_utils_set_watchpoint' of convertible types are easily swapped by mistake [bugprone-easily-swappable-parameters]
+  160 | FORCE_INLINE_ATTR void xt_utils_set_watchpoint(int wp_num,
+      |                                                ^~~~~~~~~~~
+  161 |                                                uint32_t wp_addr,
+      |                                                ~~~~~~~~~~~~~~~~~
+  162 |                                                size_t size,
+      |                                                ~~~~~~~~~~~
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:160:52: note: the first parameter in the range is 'wp_num'
+  160 | FORCE_INLINE_ATTR void xt_utils_set_watchpoint(int wp_num,
+      |                                                    ^~~~~~
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:162:55: note: the last parameter in the range is 'size'
+  162 |                                                size_t size,
+      |                                                       ^~~~
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:160:48: note: 
+  160 | FORCE_INLINE_ATTR void xt_utils_set_watchpoint(int wp_num,
+      |                                                ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:161:48: note: 'int' and 'uint32_t' may be implicitly converted: 'int' -> 'uint32_t' (as 'unsigned int'), 'uint32_t' (as 'unsigned int') -> 'int'
+  161 |                                                uint32_t wp_addr,
+      |                                                ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:160:48: note: 
+  160 | FORCE_INLINE_ATTR void xt_utils_set_watchpoint(int wp_num,
+      |                                                ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:162:48: note: 'int' and 'size_t' may be implicitly converted: 'int' -> 'size_t' (as 'unsigned int'), 'size_t' (as 'unsigned int') -> 'int'
+  162 |                                                size_t size,
+      |                                                ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:161:48: note: after resolving type aliases, the common type of 'uint32_t' and 'size_t' is 'unsigned int'
+  161 |                                                uint32_t wp_addr,
+      |                                                ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:217:74: warning: 2 adjacent parameters of 'xt_utils_compare_and_set' of similar type ('uint32_t') are easily swapped by mistake [bugprone-easily-swappable-parameters]
+  217 | FORCE_INLINE_ATTR bool xt_utils_compare_and_set(volatile uint32_t *addr, uint32_t compare_value, uint32_t new_value)
+      |                                                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:217:83: note: the first parameter in the range is 'compare_value'
+  217 | FORCE_INLINE_ATTR bool xt_utils_compare_and_set(volatile uint32_t *addr, uint32_t compare_value, uint32_t new_value)
+      |                                                                                   ^~~~~~~~~~~~~
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xt_utils.h:217:107: note: the last parameter in the range is 'new_value'
+  217 | FORCE_INLINE_ATTR bool xt_utils_compare_and_set(volatile uint32_t *addr, uint32_t compare_value, uint32_t new_value)
+      |                                                                                                           ^~~~~~~~~
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:330:9: warning: declaration uses identifier '_XTHAL_PREFETCH_BLOCKS', which is a reserved identifier [bugprone-reserved-identifier]
+  330 | #define _XTHAL_PREFETCH_BLOCKS(n)       ((n)<0?0:(n)<5?(n):(n)<15?((n)>>1)+2:9)
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_PREFETCH_BLOCKS
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:516:2: warning: preprocessor condition is always 'false', consider removing both the condition and its contents [readability-avoid-unconditional-preprocessor-if]
+  516 | #if 0
+      |  ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:541:2: warning: preprocessor condition is always 'false', consider removing both the condition and its contents [readability-avoid-unconditional-preprocessor-if]
+  541 | #if 0
+      |  ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:615:2: warning: preprocessor condition is always 'false', consider removing both the condition and its contents [readability-avoid-unconditional-preprocessor-if]
+  615 | #if 0
+      |  ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1223:46: warning: parameter name 'x' is too short, expected at least 3 characters [readability-identifier-length]
+ 1223 | extern int xthal_encode_memory_type(uint32_t x);
+      |                                              ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1310:54: warning: parameter name 'e' is too short, expected at least 3 characters [readability-identifier-length]
+ 1310 | xthal_calc_cacheadrdis(const struct xthal_MPU_entry* e, uint32_t n);
+      |                                                      ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1384:9: warning: declaration uses identifier '_XTHAL_SYSTEM_CACHE_BITS', which is a reserved identifier [bugprone-reserved-identifier]
+ 1384 | #define _XTHAL_SYSTEM_CACHE_BITS 0x000f0000
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_SYSTEM_CACHE_BITS
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1385:9: warning: declaration uses identifier '_XTHAL_LOCAL_CACHE_BITS', which is a reserved identifier [bugprone-reserved-identifier]
+ 1385 | #define _XTHAL_LOCAL_CACHE_BITS 0x00f00000
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_LOCAL_CACHE_BITS
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1386:9: warning: declaration uses identifier '_XTHAL_MEM_SYSTEM_RWC_MASK', which is a reserved identifier [bugprone-reserved-identifier]
+ 1386 | #define _XTHAL_MEM_SYSTEM_RWC_MASK 0x00070000
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_MEM_SYSTEM_RWC_MASK
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1387:9: warning: declaration uses identifier '_XTHAL_MEM_LOCAL_RWC_MASK', which is a reserved identifier [bugprone-reserved-identifier]
+ 1387 | #define _XTHAL_MEM_LOCAL_RWC_MASK  0x00700000
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_MEM_LOCAL_RWC_MASK
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1388:9: warning: declaration uses identifier '_XTHAL_SHIFT_RWC', which is a reserved identifier [bugprone-reserved-identifier]
+ 1388 | #define _XTHAL_SHIFT_RWC 16
+      |         ^~~~~~~~~~~~~~~~
+      |         XTHAL_SHIFT_RWC
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1390:9: warning: declaration uses identifier '_XTHAL_MEM_ANY_SHAREABLE', which is a reserved identifier [bugprone-reserved-identifier]
+ 1390 | #define _XTHAL_MEM_ANY_SHAREABLE(x) (((x) & XTHAL_MEM_SYSTEM_SHAREABLE) ? 1 : 0)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_MEM_ANY_SHAREABLE
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1392:9: warning: declaration uses identifier '_XTHAL_MEM_INNER_SHAREABLE', which is a reserved identifier [bugprone-reserved-identifier]
+ 1392 | #define _XTHAL_MEM_INNER_SHAREABLE(x) ((((x) & XTHAL_MEM_SYSTEM_SHAREABLE) \
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_MEM_INNER_SHAREABLE
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1395:9: warning: declaration uses identifier '_XTHAL_MEM_IS_BUFFERABLE', which is a reserved identifier [bugprone-reserved-identifier]
+ 1395 | #define _XTHAL_MEM_IS_BUFFERABLE(x) (((x) & XTHAL_MEM_BUFFERABLE) ? 1 : 0)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_MEM_IS_BUFFERABLE
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1397:9: warning: declaration uses identifier '_XTHAL_MEM_IS_DEVICE', which is a reserved identifier [bugprone-reserved-identifier]
+ 1397 | #define _XTHAL_MEM_IS_DEVICE(x) (((x) & XTHAL_MEM_DEVICE) ? 1 : 0)
+      |         ^~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_MEM_IS_DEVICE
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1399:9: warning: declaration uses identifier '_XTHAL_NON_CACHEABLE_DOMAIN', which is a reserved identifier [bugprone-reserved-identifier]
+ 1399 | #define _XTHAL_NON_CACHEABLE_DOMAIN(x) \
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_NON_CACHEABLE_DOMAIN
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1402:9: warning: declaration uses identifier '_XTHAL_CACHEABLE_DOMAIN', which is a reserved identifier [bugprone-reserved-identifier]
+ 1402 | #define _XTHAL_CACHEABLE_DOMAIN(x)  (_XTHAL_MEM_ANY_SHAREABLE(x) ? \
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_CACHEABLE_DOMAIN
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1405:9: warning: declaration uses identifier '_XTHAL_MEM_CACHE_MASK', which is a reserved identifier [bugprone-reserved-identifier]
+ 1405 | #define _XTHAL_MEM_CACHE_MASK(x) ((x) & _XTHAL_SYSTEM_CACHE_BITS)
+      |         ^~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_MEM_CACHE_MASK
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1407:9: warning: declaration uses identifier '_XTHAL_IS_SYSTEM_NONCACHEABLE', which is a reserved identifier [bugprone-reserved-identifier]
+ 1407 | #define _XTHAL_IS_SYSTEM_NONCACHEABLE(x) \
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_IS_SYSTEM_NONCACHEABLE
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1411:9: warning: declaration uses identifier '_XTHAL_ENCODE_DEVICE', which is a reserved identifier [bugprone-reserved-identifier]
+ 1411 | #define _XTHAL_ENCODE_DEVICE(x) \
+      |         ^~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_ENCODE_DEVICE
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1415:9: warning: declaration uses identifier '_XTHAL_ENCODE_SYSTEM_NONCACHEABLE', which is a reserved identifier [bugprone-reserved-identifier]
+ 1415 | #define _XTHAL_ENCODE_SYSTEM_NONCACHEABLE(x) \
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_ENCODE_SYSTEM_NONCACHEABLE
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1419:9: warning: declaration uses identifier '_XTHAL_ENCODE_SYSTEM_CACHEABLE', which is a reserved identifier [bugprone-reserved-identifier]
+ 1419 | #define _XTHAL_ENCODE_SYSTEM_CACHEABLE(x) \
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_ENCODE_SYSTEM_CACHEABLE
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/hal.h:1428:9: warning: declaration uses identifier '_XTHAL_ENCODE_SYSTEM_CACHEABLE_LOCAL_CACHEABLE', which is a reserved identifier [bugprone-reserved-identifier]
+ 1428 | #define _XTHAL_ENCODE_SYSTEM_CACHEABLE_LOCAL_CACHEABLE(x) \
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |         XTHAL_ENCODE_SYSTEM_CACHEABLE_LOCAL_CACHEABLE
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h:28:9: warning: declaration uses identifier '_XTOS_CORE_STATE_H_', which is a reserved identifier [bugprone-reserved-identifier]
+   28 | #define _XTOS_CORE_STATE_H_
+      |         ^~~~~~~~~~~~~~~~~~~
+      |         XTOS_CORE_STATE_H_
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h:28:9: warning: declaration uses identifier '_XTRUNTIME_FRAMES_H_', which is a reserved identifier [bugprone-reserved-identifier]
+   28 | #define _XTRUNTIME_FRAMES_H_
+      |         ^~~~~~~~~~~~~~~~~~~~
+      |         XTRUNTIME_FRAMES_H_
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:65:15: warning: declaration uses identifier '_xtos_handler_func', which is reserved in the global namespace [bugprone-reserved-identifier]
+   65 | typedef void (_xtos_handler_func)(void);
+      |               ^~~~~~~~~~~~~~~~~~
+      |               xtos_handler_func
+   66 | #endif
+   67 | typedef _xtos_handler_func *_xtos_handler;
+      |         ~~~~~~~~~~~~~~~~~~
+      |         xtos_handler_func
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:67:29: warning: declaration uses identifier '_xtos_handler', which is reserved in the global namespace [bugprone-reserved-identifier]
+   67 | typedef _xtos_handler_func *_xtos_handler;
+      |                             ^~~~~~~~~~~~~
+      |                             xtos_handler
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:145:2: warning: preprocessor condition is always 'false', consider removing both the condition and its contents [readability-avoid-unconditional-preprocessor-if]
+  145 | #if 0 /* XTOS_LOCK_LEVEL is not exported to applications */
+      |  ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:155:21: warning: declaration uses identifier '_xtos_ints_off', which is reserved in the global namespace [bugprone-reserved-identifier]
+  155 | extern unsigned int     _xtos_ints_off( unsigned int mask );
+      |                         ^~~~~~~~~~~~~~
+      |                         xtos_ints_off
+  156 | extern unsigned int     _xtos_ints_on( unsigned int mask );
+  157 | 
+  158 | /* Newer functions to enable/disable the specified interrupt.  */
+  159 | static inline void _xtos_interrupt_enable(unsigned int intnum)
+  160 | {
+  161 |     _xtos_ints_on(1U << intnum);
+  162 | }
+  163 | 
+  164 | static inline void _xtos_interrupt_disable(unsigned int intnum)
+  165 | {
+  166 |     _xtos_ints_off(1U << intnum);
+      |     ~~~~~~~~~~~~~~
+      |     xtos_ints_off
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:156:21: warning: declaration uses identifier '_xtos_ints_on', which is reserved in the global namespace [bugprone-reserved-identifier]
+  156 | extern unsigned int     _xtos_ints_on( unsigned int mask );
+      |                         ^~~~~~~~~~~~~
+      |                         xtos_ints_on
+  157 | 
+  158 | /* Newer functions to enable/disable the specified interrupt.  */
+  159 | static inline void _xtos_interrupt_enable(unsigned int intnum)
+  160 | {
+  161 |     _xtos_ints_on(1U << intnum);
+      |     ~~~~~~~~~~~~~
+      |     xtos_ints_on
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:159:20: warning: declaration uses identifier '_xtos_interrupt_enable', which is reserved in the global namespace [bugprone-reserved-identifier]
+  159 | static inline void _xtos_interrupt_enable(unsigned int intnum)
+      |                    ^~~~~~~~~~~~~~~~~~~~~~
+      |                    xtos_interrupt_enable
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:164:20: warning: declaration uses identifier '_xtos_interrupt_disable', which is reserved in the global namespace [bugprone-reserved-identifier]
+  164 | static inline void _xtos_interrupt_disable(unsigned int intnum)
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~
+      |                    xtos_interrupt_disable
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:170:18: warning: declaration uses identifier '_xtos_set_min_intlevel', which is reserved in the global namespace [bugprone-reserved-identifier]
+  170 | extern unsigned         _xtos_set_min_intlevel( int intlevel );
+      |                         ^~~~~~~~~~~~~~~~~~~~~~
+      |                         xtos_set_min_intlevel
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:171:18: warning: declaration uses identifier '_xtos_restore_intlevel', which is reserved in the global namespace [bugprone-reserved-identifier]
+  171 | extern unsigned         _xtos_restore_intlevel( unsigned restoreval );
+      |                         ^~~~~~~~~~~~~~~~~~~~~~
+      |                         xtos_restore_intlevel
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:172:18: warning: declaration uses identifier '_xtos_restore_just_intlevel', which is reserved in the global namespace [bugprone-reserved-identifier]
+  172 | extern unsigned         _xtos_restore_just_intlevel( unsigned restoreval );
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                         xtos_restore_just_intlevel
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:173:22: warning: declaration uses identifier '_xtos_set_interrupt_handler', which is reserved in the global namespace [bugprone-reserved-identifier]
+  173 | extern _xtos_handler    _xtos_set_interrupt_handler( int n, _xtos_handler f );
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                         xtos_set_interrupt_handler
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:173:72: warning: parameter name 'f' is too short, expected at least 3 characters [readability-identifier-length]
+  173 | extern _xtos_handler    _xtos_set_interrupt_handler( int n, _xtos_handler f );
+      |                                                                           ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:174:22: warning: declaration uses identifier '_xtos_set_interrupt_handler_arg', which is reserved in the global namespace [bugprone-reserved-identifier]
+  174 | extern _xtos_handler    _xtos_set_interrupt_handler_arg( int n, _xtos_handler f, void *arg );
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                         xtos_set_interrupt_handler_arg
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:174:76: warning: parameter name 'f' is too short, expected at least 3 characters [readability-identifier-length]
+  174 | extern _xtos_handler    _xtos_set_interrupt_handler_arg( int n, _xtos_handler f, void *arg );
+      |                                                                               ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:175:22: warning: declaration uses identifier '_xtos_set_exception_handler', which is reserved in the global namespace [bugprone-reserved-identifier]
+  175 | extern _xtos_handler    _xtos_set_exception_handler( int n, _xtos_handler f );
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                         xtos_set_exception_handler
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:175:72: warning: parameter name 'f' is too short, expected at least 3 characters [readability-identifier-length]
+  175 | extern _xtos_handler    _xtos_set_exception_handler( int n, _xtos_handler f );
+      |                                                                           ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:177:14: warning: declaration uses identifier '_xtos_memep_initrams', which is reserved in the global namespace [bugprone-reserved-identifier]
+  177 | extern void             _xtos_memep_initrams( void );
+      |                         ^~~~~~~~~~~~~~~~~~~~
+      |                         xtos_memep_initrams
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:178:14: warning: declaration uses identifier '_xtos_memep_enable', which is reserved in the global namespace [bugprone-reserved-identifier]
+  178 | extern void             _xtos_memep_enable( int flags );
+      |                         ^~~~~~~~~~~~~~~~~~
+      |                         xtos_memep_enable
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:182:14: warning: declaration uses identifier '_xtos_dispatch_level1_interrupts', which is reserved in the global namespace [bugprone-reserved-identifier]
+  182 | extern void             _xtos_dispatch_level1_interrupts( void );
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                         xtos_dispatch_level1_interrupts
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:185:14: warning: declaration uses identifier '_xtos_dispatch_level2_interrupts', which is reserved in the global namespace [bugprone-reserved-identifier]
+  185 | extern void             _xtos_dispatch_level2_interrupts( void );
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                         xtos_dispatch_level2_interrupts
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:188:14: warning: declaration uses identifier '_xtos_dispatch_level3_interrupts', which is reserved in the global namespace [bugprone-reserved-identifier]
+  188 | extern void             _xtos_dispatch_level3_interrupts( void );
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                         xtos_dispatch_level3_interrupts
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:191:14: warning: declaration uses identifier '_xtos_dispatch_level4_interrupts', which is reserved in the global namespace [bugprone-reserved-identifier]
+  191 | extern void             _xtos_dispatch_level4_interrupts( void );
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                         xtos_dispatch_level4_interrupts
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:194:14: warning: declaration uses identifier '_xtos_dispatch_level5_interrupts', which is reserved in the global namespace [bugprone-reserved-identifier]
+  194 | extern void             _xtos_dispatch_level5_interrupts( void );
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                         xtos_dispatch_level5_interrupts
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:197:14: warning: declaration uses identifier '_xtos_dispatch_level6_interrupts', which is reserved in the global namespace [bugprone-reserved-identifier]
+  197 | extern void             _xtos_dispatch_level6_interrupts( void );
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                         xtos_dispatch_level6_interrupts
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:201:21: warning: declaration uses identifier '_xtos_read_ints', which is reserved in the global namespace [bugprone-reserved-identifier]
+  201 | extern unsigned int     _xtos_read_ints( void );
+      |                         ^~~~~~~~~~~~~~~
+      |                         xtos_read_ints
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:202:14: warning: declaration uses identifier '_xtos_clear_ints', which is reserved in the global namespace [bugprone-reserved-identifier]
+  202 | extern void             _xtos_clear_ints( unsigned int mask );
+      |                         ^~~~~~~~~~~~~~~~
+      |                         xtos_clear_ints
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:206:13: warning: declaration uses identifier '_xtos_core_shutoff', which is reserved in the global namespace [bugprone-reserved-identifier]
+  206 | extern int              _xtos_core_shutoff(unsigned flags);
+      |                         ^~~~~~~~~~~~~~~~~~
+      |                         xtos_core_shutoff
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:207:13: warning: declaration uses identifier '_xtos_core_save', which is reserved in the global namespace [bugprone-reserved-identifier]
+  207 | extern int              _xtos_core_save(unsigned flags, XtosCoreState *savearea, void *code);
+      |                         ^~~~~~~~~~~~~~~
+      |                         xtos_core_save
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:208:14: warning: declaration uses identifier '_xtos_core_restore', which is reserved in the global namespace [bugprone-reserved-identifier]
+  208 | extern void             _xtos_core_restore(unsigned retvalue, XtosCoreState *savearea);
+      |                         ^~~~~~~~~~~~~~~~~~
+      |                         xtos_core_restore
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:218:14: warning: declaration uses identifier '_xtos_timer_0_delta', which is reserved in the global namespace [bugprone-reserved-identifier]
+  218 | extern void             _xtos_timer_0_delta( int cycles );
+      |                         ^~~~~~~~~~~~~~~~~~~
+      |                         xtos_timer_0_delta
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:221:14: warning: declaration uses identifier '_xtos_timer_1_delta', which is reserved in the global namespace [bugprone-reserved-identifier]
+  221 | extern void             _xtos_timer_1_delta( int cycles );
+      |                         ^~~~~~~~~~~~~~~~~~~
+      |                         xtos_timer_1_delta
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa/xtruntime.h:224:14: warning: declaration uses identifier '_xtos_timer_2_delta', which is reserved in the global namespace [bugprone-reserved-identifier]
+  224 | extern void             _xtos_timer_2_delta( int cycles );
+      |                         ^~~~~~~~~~~~~~~~~~~
+      |                         xtos_timer_2_delta
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa_api.h:36:9: warning: declaration uses identifier '__XTENSA_API_H__', which is a reserved identifier [bugprone-reserved-identifier]
+   36 | #define __XTENSA_API_H__
+      |         ^~~~~~~~~~~~~~~~
+      |         XTENSA_API_H_
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa_api.h:67:70: warning: parameter name 'f' is too short, expected at least 3 characters [readability-identifier-length]
+   67 | extern xt_exc_handler xt_set_exception_handler(int n, xt_exc_handler f);
+      |                                                                      ^
+/home/yuri/.espressif/v6/esp-idf/components/xtensa/include/xtensa_api.h:80:62: warning: parameter name 'f' is too short, expected at least 3 characters [readability-identifier-length]
+   80 | extern xt_handler xt_set_interrupt_handler(int n, xt_handler f, void * arg);
+      |                                                              ^
+311 warnings and 6 errors generated.
+Error while processing /home/yuri/Dev/Embedded/labs/lab_1/main/main.c.
+Suppressed 131 warnings (131 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+Found compiler error(s).
+
