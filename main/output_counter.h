@@ -9,10 +9,10 @@
 #include "digits.h"
 #include "esp_log.h"
 
-#define BUTTON_PIN GPIO_NUM_7
-#define DATA_PIN GPIO_NUM_4
-#define SHIFT_PIN GPIO_NUM_6 //tells shift register to save current value at data pin
-#define SYNC_LATCH_PIN GPIO_NUM_5 //tells shift register to output new value instead of old one
+#define BUTTON_PIN GPIO_NUM_47
+#define DATA_PIN GPIO_NUM_0
+#define SHIFT_PIN GPIO_NUM_48 //tells shift register to save current value at data pin
+#define SYNC_LATCH_PIN GPIO_NUM_45 //tells shift register to output new value instead of old one
 #define ORDER_NUMBER (uint16_t)14;
 
 QueueHandle_t button_queue, display_queue;
