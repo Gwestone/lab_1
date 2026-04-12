@@ -1,8 +1,4 @@
-#pragma once
-
-#include "driver/gpio.h"
-#include "freertos/idf_additions.h"
-#define LED_PIN GPIO_NUM_2
+#include "blink_led.h"
 
 void blink_led_task(void *pvParameters){
     gpio_reset_pin(LED_PIN);

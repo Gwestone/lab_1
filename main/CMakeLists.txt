@@ -1,2 +1,18 @@
-idf_component_register(SRCS "main.c"
-                    INCLUDE_DIRS ".")
+idf_component_register(
+    SRCS
+        "main.c"
+        "output-counter/output_counter.c"
+        "blink-led/blink_led.c"
+        "shift-out-lsb/shift_out_lsb.c"
+        "button/button.c"
+        "display/display.c"
+        "digits/digits.c"
+    INCLUDE_DIRS
+        "."
+        "output-counter"
+        "blink-led"
+        "shift-out-lsb"
+        "button"
+        "display"
+        "digits"
+)
