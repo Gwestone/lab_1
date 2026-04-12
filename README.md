@@ -15,9 +15,9 @@ It displays a 0–99 auto-incrementing counter on a 2-digit **7-segment display*
 | Shift register LATCH    | `GPIO_NUM_45` |
 | LED (unused by default) | `GPIO_NUM_2`  |
 
-### Wiring overview
+## Wiring overview
 
-## Instead of using pins in diagram use next pins
+### Instead of using pins in diagram use next pins
 
 ```c
 #define DATA_PIN       GPIO_NUM_0
