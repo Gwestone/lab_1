@@ -2,6 +2,7 @@
 
 #include "driver/gpio.h"
 #include "esp_attr.h"
+#include "esp_timer.h"
 #include "freertos/idf_additions.h"
 #include "shift_out_lsb.h"
 #include <stdint.h>
@@ -16,21 +17,26 @@
 
 QueueHandle_t button_queue, display_queue;
 bool useConstant = false;
+uint64_t last_isr_time = 0;
+uint16_t counter = 0;
 
 void buttonTask(void* pvParameters){
     uint32_t level;
     uint16_t valueToDisplay = ORDER_NUMBER;
+    
     while(1){
-        //read last value from queue
-        int valueCount = uxQueueMessagesWaiting(button_queue);
-        if(valueCount > 0){
-            for(int i = 0; i < valueCount; i++){
-                xQueueReceive(button_queue, &level, portMAX_DELAY);
-            }
-            ESP_LOGI("buttonTask", "Button pressed: %d", level);
-            useConstant = !level;
+        if(xQueueReceive(button_queue, &level, portMAX_DELAY)){
+            ESP_LOGI("buttonTask", "Button state changed: %d", (int)level);
+            
+            // If level is 0 (pulled to GND), button is pressed. 
+            // If level is 1 (pulled HIGH), button is released.
+            useConstant = !useConstant;
+            
+            // If the button is currently being held down, send the static order number
             if(useConstant){
                 xQueueSend(display_queue, &valueToDisplay, portMAX_DELAY);
+            } else {
+                xQueueSend(display_queue, &counter, portMAX_DELAY);
             }
         }
         vTaskDelay(pdMS_TO_TICKS(10));
@@ -55,8 +61,14 @@ void display_task(void* pvParameters){
 }
 
 void IRAM_ATTR button_isr(void *args){
-    uint32_t level = gpio_get_level(BUTTON_PIN);
-    xQueueSendFromISR(button_queue, &level, NULL);
+    uint64_t current_time = esp_timer_get_time();
+    
+    // 500ms (500,000 microseconds) debounce window
+    if (current_time - last_isr_time > 500000) {
+        uint32_t level = gpio_get_level(BUTTON_PIN);
+        xQueueSendFromISR(button_queue, &level, NULL);
+        last_isr_time = current_time;
+    }
 }
 
 void enable_button_interupt(){
@@ -87,7 +99,7 @@ void output_counter_task(void *pvParameters){
     gpio_set_direction(SHIFT_PIN, GPIO_MODE_OUTPUT);
     gpio_set_direction(SYNC_LATCH_PIN, GPIO_MODE_OUTPUT);
 
-    uint16_t counter = 0;
+    counter = 0;
 
     shift_out_lsb(DATA_PIN, SHIFT_PIN, 0xff);
 
