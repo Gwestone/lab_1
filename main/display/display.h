@@ -8,8 +8,8 @@
 #include <stdint.h>
 
 #define DATA_PIN      GPIO_NUM_0
-#define SHIFT_PIN     GPIO_NUM_48  // tells shift register to save current value at data pin
-#define SYNC_LATCH_PIN GPIO_NUM_45 // tells shift register to output new value instead of old one
+#define SHIFT_PIN     GPIO_NUM_48  
+#define SYNC_LATCH_PIN GPIO_NUM_45 
 
 extern QueueHandle_t display_queue;
 

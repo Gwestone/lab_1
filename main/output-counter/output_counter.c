@@ -4,12 +4,10 @@
 #include "shift_out_lsb.h"
 #include "driver/gpio.h"
 
-bool useConstant = false;
+volatile bool useConstant = false;
 uint16_t counter = 0;
 
 void output_counter_task(void *pvParameters){
-    enable_button_interupt();
-    enable_display_task();
 
     gpio_reset_pin(DATA_PIN);
     gpio_reset_pin(SHIFT_PIN);
@@ -32,4 +30,8 @@ void output_counter_task(void *pvParameters){
         }
         xQueueSend(display_queue, &counter, portMAX_DELAY);
     }
+}
+
+void enable_output_counter_task(void){
+    xTaskCreate(output_counter_task, "Output Counter", 2048, NULL, 5, NULL);
 }

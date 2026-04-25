@@ -10,3 +10,7 @@ void blink_led_task(void *pvParameters){
         led_state = !led_state;
     }
 }
+
+void enable_blink_led_task(void){
+    xTaskCreate(blink_led_task, "Blink LED", 2048, NULL, 5, NULL);
+}
